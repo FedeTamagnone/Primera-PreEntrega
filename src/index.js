@@ -1,13 +1,27 @@
+// MODULOS
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+// ESTILOS
 import './index.css';
-import App from './App';
+
+//COMPONENTES
+//import App from './App';
+import NavBar from './components/navbar/NavBar.js';
+import ItemListContainer from './components/itemListContainer/ItemListContainer.js';
+import Footer from './components/footer/Footer.js';
+
+// WEBVITALS
 import reportWebVitals from './reportWebVitals';
 
+
+/* --------------------------------- LÓGICA --------------------------------- */
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <NavBar/>
+    <ItemListContainer greeting/>
+    <Footer/>
   </React.StrictMode>
 );
 

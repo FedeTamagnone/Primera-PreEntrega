@@ -1,0 +1,28 @@
+.titulo{
+    text-align: center;
+    margin: 10px 10px 50px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #243763;
+}
+
+
+.barraNavegacion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.barraNavegacion li{
+    padding: 3px 20px;
+    list-style: none;
+}
+.barraNavegacion li a {
+    font-size: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.barraNavegacion a:hover {
+    text-decoration: underline;
+    color: #AD8E70;
+}
