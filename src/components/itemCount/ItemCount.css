@@ -1,0 +1,20 @@
+
+.contenedorContador{
+display: grid;
+justify-items: center;
+}
+.contador {
+    display: flex;
+    padding: 10px;
+}
+
+.contador p {
+    font-size: 15px;
+}
+
+.contador button {
+    padding: 5px;
+}
+.agregar{
+    display: flex;
+}

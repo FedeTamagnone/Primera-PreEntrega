@@ -4,20 +4,18 @@
 //ESTILOS
 import "./ItemListContainer.css";
 //COMPONENTES
+
+import ItemList from "../itemList/ItemList.js";
 /* --------------------------------- LÓGICA --------------------------------- */
 //PUEDO USAR ARROW FUNCTION
 const ItemListContainer = (props) => {
     //FUNCION CONSTRUCTORA
     //RETORNO QUE SE VA A RENDERIZAR
     return (
-        <main> 
-            <p> Componente contenedor ItemListContainer {props.greeting}</p>
-            <section>
-            <div>A</div>
-            <div>B</div>
-            <div>C</div>
-            </section>
-        </main> 
+            <div className="contenedorTarjetas">
+                <p> Componente contenedor ItemListContainer {props.greeting}</p>
+                <ItemList/>
+            </div>
     )
 }
 
