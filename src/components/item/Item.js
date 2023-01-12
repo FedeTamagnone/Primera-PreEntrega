@@ -2,6 +2,8 @@
 
 //MODULOS
 import ItemCount from "../itemCount/ItemCount.js";
+//IMPORTACIONES BOOTSTRAP
+import Card from 'react-bootstrap/Card';
 //ESTILOS
 /* ---------------------------- ctrl + shift + L ---------------------------- */
 import "./Item.css";
@@ -10,18 +12,19 @@ import "./Item.css";
 
 const Item = (props) => {
 //DESCONSTRULLO PROPS.DATA PARA NO ESTAR LLAMANDOLO => PROPS.DATA.NOMBRE, PROPS.DATA.TIPO
-const {nombre,tipo,marca,desc,precio,stock} = props.data
+const {nombre,desc,precio,stock,img} = props.data
 
     return ( 
         <section>
-            <div className="card">
-                <div className="card-body">
-                    <h5 className="card-title"> {nombre} </h5>
-                    <p className="card-text"> {desc}</p>
-                    <h5 className="card-title"> ${precio} </h5>
+            <Card className="tarjeta">
+                <Card.Img variant="top" src='img' />
+                <Card.Body className="card-body">
+                    <Card.Title> {nombre} </Card.Title>                  
+                    <Card.Text> {desc} </Card.Text>
+                    <Card.Text> ${precio}  </Card.Text>
                     <ItemCount stock = {stock}/>
-                </div>
-            </div>
+                </Card.Body>
+            </Card>
         </section>
     )
 }

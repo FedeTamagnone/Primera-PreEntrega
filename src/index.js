@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client';
 
 // ESTILOS
 import './index.css';
+//ESTILOS BOOSTSTRAP
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //COMPONENTES
 //import App from './App';

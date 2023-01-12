@@ -14,13 +14,14 @@ function NavBar(){ //FUNCION CONSTRUCTORA
     //PASO CANTIDAD COMO PROPIEDAD
     return(
         <header>
-            <h1 className="titulo">Que Rulasos</h1>
             <nav className="barraNavegacion">
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Productos</a></li>
-            <li><a href="">RuliTips</a></li>            
-            <li><a href="">RuliPedia</a></li>
-
+                <ul> 
+                    <li><a href="">Servicios</a></li>
+                    <li><a href="">Productos</a></li>
+                    <h1 className="titulo">Que <br/>Rulasos</h1>
+                    <li><a href="">RuliTips</a></li>            
+                    <li><a href="">RuliPedia</a></li>
+                </ul>
             <CartWidget cantidad="10"/> 
             </nav>
         </header>

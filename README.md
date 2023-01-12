@@ -74,3 +74,4 @@ PALETA DE COLORES
 FF6E31 - Naranja
 FFEBB7 - Clarito
 AD8E70 - Marron
+f7f3eb - Body

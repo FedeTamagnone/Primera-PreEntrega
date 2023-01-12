@@ -1,22 +1,28 @@
-.titulo{
+
+.titulo {
     text-align: center;
-    margin: 10px 10px 50px 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #243763;
+    margin: 0;
 }
-
 
 .barraNavegacion {
     display: flex;
     justify-content: space-around;
-    align-items: center;
 }
 
-.barraNavegacion li{
+.barraNavegacion ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.barraNavegacion ul li {
     padding: 3px 20px;
     list-style: none;
 }
-.barraNavegacion li a {
+
+.barraNavegacion ul li a {
     font-size: 100%;
     text-decoration: none;
     color: black;
