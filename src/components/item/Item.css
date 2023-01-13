@@ -1,11 +1,16 @@
 .tarjeta{
     width: 18rem;
-    min-height: 23rem;
-    margin-bottom: 40px;;
+    margin-bottom: 40px;
+    min-height: 40rem;
 }
 .card-body{
     display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: space-between;
+}
+
+
+p{
+    margin: 0px;
 }

@@ -13,8 +13,8 @@ const ItemListContainer = (props) => {
     //RETORNO QUE SE VA A RENDERIZAR
     return (
             <div className="contenedorTarjetas">
-                <p> Componente contenedor ItemListContainer {props.greeting}</p>
-                <ItemList/>
+                <p> Componente contenedor ItemListContainer {props.greeting} - Contiene ItemList</p>
+                <ItemList/>|
             </div>
     )
 }

@@ -7,14 +7,13 @@
 }
 
 .barraNavegacion {
-    display: flex;
-    justify-content: space-around;
+display: flex;
+justify-content: center;
 }
 
 .barraNavegacion ul {
     display: flex;
     align-items: center;
-    margin: 0;
 }
 
 .barraNavegacion ul li {

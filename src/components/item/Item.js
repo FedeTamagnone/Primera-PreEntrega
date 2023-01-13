@@ -16,8 +16,9 @@ const {nombre,desc,precio,stock,img} = props.data
 
     return ( 
         <section>
+            <p>Este es cada item</p>
             <Card className="tarjeta">
-                <Card.Img variant="top" src='img' />
+                <Card.Img className ="imagen"  src= {img} />      
                 <Card.Body className="card-body">
                     <Card.Title> {nombre} </Card.Title>                  
                     <Card.Text> {desc} </Card.Text>
