@@ -52,21 +52,21 @@ const Home = () => {
 
                 <div className='div1'>
                     <Link to="/productos">
-                        <h3>Cabello Dañado</h3>
-                        <img src="/data/multimedia/cuadrado1.jpg" alt="Imagen"></img>
+                        <h3 className="letrasBlancas">Cabello Dañado</h3>
+                        <img className="imag"src="/data/multimedia/cuadrado1.jpg" alt="Imagen"></img>
                     </Link>
                 </div>
 
                 <div className='div2'>
                     <Link to="/productos">
-                        <h3>Cabello Seco</h3>
-                        <img src="/data/multimedia/cuadrado2.jpg" alt="Imagen"></img>
+                        <h3 className="letrasBlancas">Cabello Seco</h3>
+                        <img className="imag"src="/data/multimedia/cuadrado2.jpg" alt="Imagen"></img>
                     </Link>
                 </div>
                 <div className='div3'>
                     <Link to="/productos">
-                        <h3>Cabello Saludable</h3>
-                        <img src="/data/multimedia/cuadrado3.jpg" alt="Imagen"></img>
+                        <h3 className="letrasBlancas">Cabello Saludable</h3>
+                        <img className="imag"src="/data/multimedia/cuadrado3.jpg" alt="Imagen"></img>
                     </Link>
                 </div>
             </section>

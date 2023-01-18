@@ -13,7 +13,7 @@ import "./Item.css";
 
 const Item = (props) => {
 //DESCONSTRULLO PROPS.DATA PARA NO ESTAR LLAMANDOLO => PROPS.DATA.NOMBRE, PROPS.DATA.TIPO
-const {nombre,desc,precio,stock,img,tipo} = props.data
+const {nombre,desc,precio,stock,img,id} = props.data
 
     return ( 
         <section>
@@ -25,8 +25,8 @@ const {nombre,desc,precio,stock,img,tipo} = props.data
                 <Card.Body className="card-body">
                     <Card.Title> {nombre} </Card.Title>                  
                     <Card.Text> {desc} </Card.Text>
-                    <Card.Text> ${precio}  </Card.Text>
-                    <Link to={`/producto/${tipo}`}> Ver detalle del producto</Link>
+                    <Card.Text> <h4> ${precio} </h4> </Card.Text>
+                    <Link to={`/producto/${id}`}> Ver detalle del producto</Link>
                     <ItemCount stock = {stock}/>
                 </Card.Body>
             </Card>

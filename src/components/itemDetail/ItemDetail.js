@@ -14,14 +14,13 @@ const ItemDetail = (props) => {
     const {nombre,desc,precio,stock,img} = props.data
 
     return ( 
-        <section>
-            <p>Este es cada item</p>
-            <Card className="tarjeta">
-                <Card.Img className ="imagen"  src= {img} />      
-                <Card.Body className="card-body">
+        <section className="contenedorTarjetaDetail">
+            <Card className="tarjeta-Detail">
+                    <Card.Img className ="imagen-Detail"  src= {img} />      
+                <Card.Body className="card-body-Detail">
                     <Card.Title> {nombre} </Card.Title>                  
                     <Card.Text> {desc} </Card.Text>
-                    <Card.Text> ${precio}  </Card.Text>
+                    <Card.Text> <h4> ${precio} </h4> </Card.Text>
                     <ItemCount stock = {stock}/>
                 </Card.Body>
             </Card>

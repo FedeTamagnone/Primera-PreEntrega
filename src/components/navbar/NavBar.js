@@ -23,6 +23,9 @@ function NavBar() { //FUNCION CONSTRUCTORA
                 <ul>
                     <li><Link to="/">INICIO</Link></li>
                     <li><Link to="/productos">PRODUCTOS</Link></li>
+                    <li><Link to="/productos/crema">CREMAS</Link></li>
+                    <li><Link to="/productos/shampoo">SHAMPOOS</Link></li>
+                    <li><Link to="/productos/gel">GEL</Link></li>
                     <li><Link to="/informacion">INFORMACIÓN</Link></li>
                     <li><Link to="/nosotros">NOSOTROS</Link></li>
                     <CartWidget cantidad="10" />

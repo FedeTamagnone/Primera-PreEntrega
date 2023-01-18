@@ -1,15 +1,20 @@
-.tarjeta{
-    width: 18rem;
-    margin-bottom: 40px;
-    min-height: 40rem;
+.contenedorTarjetaDetail{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
 }
-.card-body{
+
+.tarjeta-Detail{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+}
+.card-body-Detail{
     display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 p{
     margin: 0px;
