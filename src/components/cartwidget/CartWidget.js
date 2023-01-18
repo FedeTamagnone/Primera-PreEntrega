@@ -12,7 +12,7 @@ const CartWidget = (props) => {
     //RETORNO QUE SE VA A RENDERIZAR
     return ( 
         <div className="contenedorCarrito">
-            <img src={Carrito}></img>
+            <img alt="carrito" src={Carrito}></img>
             <p> {props.cantidad}</p>
         </div>
             

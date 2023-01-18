@@ -1,0 +1,13 @@
+.contenedorDetail{
+    display: flex;
+    justify-content: center;
+}
+
+.link{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link a {
+    margin-right: 1%;
+}

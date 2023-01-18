@@ -1,6 +1,7 @@
 /* ------------------------------- IMPORTACIONES ---------------------------- */
 
 //MODULOS
+import { Link } from "react-router-dom";
 //ESTILOS
 import "./NavBar.css";
 import CartWidget from "../cartwidget/CartWidget.js";
@@ -15,15 +16,17 @@ function NavBar() { //FUNCION CONSTRUCTORA
     //PASO CANTIDAD COMO PROPIEDAD
     return (
         <header>
+            
+            <h1 className="titulo">Qué Rulasos. Cuidado Capilar Integral</h1>
+
             <nav className="barraNavegacion">
                 <ul>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <h1 className="titulo">Que <br />Rulasos</h1>
-                    <li><a href="#">RuliTips</a></li>
-                    <li><a href="#">RuliPedia</a></li>
+                    <li><Link to="/">INICIO</Link></li>
+                    <li><Link to="/productos">PRODUCTOS</Link></li>
+                    <li><Link to="/informacion">INFORMACIÓN</Link></li>
+                    <li><Link to="/nosotros">NOSOTROS</Link></li>
                     <CartWidget cantidad="10" />
-                </ul>
+                </ul> 
             </nav>
         </header>
     )

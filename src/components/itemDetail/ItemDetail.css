@@ -10,11 +10,6 @@
     justify-content: space-between;
 }
 
-.divImagen{
-    display: flex;
-    align-items: flex-end;
-    min-height: 22rem;
-}
 
 p{
     margin: 0px;

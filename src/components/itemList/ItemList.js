@@ -19,7 +19,7 @@ const ItemList = () => {
             .then(res => res.json())
             .then(json => setProductos(json.map(producto => <Item key={producto.id} id={"producto" + producto.id} data={producto} />)));
     }, [])
-    console.log(productos);
+
     return (
         <div>
             <p> Este es el item List - Contenedor de Item</p>
