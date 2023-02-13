@@ -13,17 +13,18 @@ const ItemCount = (props) => {
 //AGREGAR UN MANEJO DE ESTADO (useState)
 const [count, setCount]= useState(0);
 
-//FUNCIONES SUMAR Y RESTAR
-//NO SE PUEDE RESTAR MENOS DE CERO
-//NO PUEDO SUMAR MAS DE LA CANTIDAD MAXIMA EN STOCK
+//guardarCantidad es una funcion y de esa forma el hijo modifica el estado del padre. 
+
 const addOne = () =>{
     if(count < props.stock)
     setCount(count + 1);
+    props.guardarCantidad(count)
 }
 
 const disOne = () =>{
     if(count > 0)
     setCount(count - 1);
+    props.guardarCantidad(count)
 }
 
 //FUNCION AGREAR A CARRITO

@@ -14,7 +14,7 @@ const ItemList = (props) => {
     return (
         <div>
             <p> Este es el item List - Contenedor de Item</p>
-            <div className="contenedorTarjetasHijo"> 
+            <div className="contenedorTarjetasHijo">
                 {props.productos.map((data)=><Item key={data.id} data={data}/>)}
             </div>
         </div>

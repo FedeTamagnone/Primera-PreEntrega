@@ -28,7 +28,7 @@ function NavBar() { //FUNCION CONSTRUCTORA
                     <li><Link to="/productos/gel">GEL</Link></li>
                     <li><Link to="/informacion">INFORMACIÓN</Link></li>
                     <li><Link to="/nosotros">NOSOTROS</Link></li>
-                    <CartWidget cantidad="10" />
+                    <li><Link to="/carrito"> <CartWidget cantidad="10"/> </Link></li>
                 </ul> 
             </nav>
         </header>

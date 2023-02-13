@@ -10,6 +10,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 //COMPONENTES
 //import App from './App';
+import CartProdiver from './context/CartContex.js';
+
+
 import ItemListContainer from './components/itemListContainer/ItemListContainer.js';
 import Footer from './components/footer/Footer.js';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer.js';
@@ -19,6 +22,7 @@ import NavBar from './components/navbar/NavBar.js';
 import Home from './components/home/Home.js';
 import AboutUs from './components/aboutUs/AboutUs.js';
 import Info from './components/info/Info.js';
+import Cart  from './components/cart/Cart';
 
 // WEBVITALS
 import reportWebVitals from './reportWebVitals';
@@ -28,22 +32,23 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
 
-            <NavBar />
-
-            <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route exact path="/productos" element={<ItemListContainer greeting="Estamos en el directorio" />} />
-                <Route exact path="/productos/:tipo" element={<ItemListContainer greeting="Estamos en el directorio"/>} />
-                <Route exact path="/producto/:productoId" element={<ItemDetailContainer />} />
-                <Route exact path="/informacion" element={<Info />} />
-                <Route exact path="/nosotros" element={<AboutUs />} />
-            </Routes>
-
-            <Footer />
-
-        </BrowserRouter>
+        <CartProdiver>
+            <BrowserRouter>
+                <NavBar />
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    <Route exact path="/productos" element={<ItemListContainer greeting="Estamos en el directorio" />} />
+                    <Route exact path="/productos/:tipo" element={<ItemListContainer greeting="Estamos en el directorio" />} />
+                    <Route exact path="/producto/:productoId" element={<ItemDetailContainer />} />
+                    <Route exact path="/informacion" element={<Info />} />
+                    <Route exact path="/nosotros" element={<AboutUs />} />
+                    <Route exact path="/carrito" element={<Cart/>} />
+                </Routes>
+                <Footer />
+            </BrowserRouter>
+        </CartProdiver>
+        
     </React.StrictMode>
 );
 
