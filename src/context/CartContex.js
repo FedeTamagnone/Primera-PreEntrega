@@ -19,36 +19,32 @@ export const useCartContext = () => { return useContext(CartContext) }
 
 const CartProvider = ({ children }) => {
 
-    //ESTE ES EL STADO DE CARTPROVIDER
-    const [items, setItems] = useState([])
+    //ESTE ES EL ESTADO DE CARTPROVIDER
+    const [itemsCarrito, setItemsCarrito] = useState([])
 
-    //FUNCIONES DE NUESTRO CARTPROVIDER
-    console.log(items);
-
+    
     const agregarAlCarrito = (data) => {
-
         if(validarProductoExistente(data.id)) {
         alert("El producto ya esta en el carrito")
-        } else{
-            const listaActual = items
+        } else {
+            const listaActual = itemsCarrito
             listaActual.push(data)
-            setItems(listaActual)
-            console.log(items);
+            setItemsCarrito(listaActual)
+            console.log(itemsCarrito);
         }
     }
 
 
     const borrarDelCarrito = (id) => {
-        const nuevaLista = items.filter(e => e.id !== id)
-        setItems(nuevaLista)
+        setItemsCarrito(itemsCarrito.filter(e => e.id !== id))
     }
 
     const limpiarCarrito = () => {
-        setItems([])
-
+        setItemsCarrito([])
     }
+    
     const validarProductoExistente = (id) => {
-        if (items.find(e => e.id === id)) {
+        if (itemsCarrito.find(e => e.id === id)) {
             return true
         } else {
             return false
@@ -57,7 +53,7 @@ const CartProvider = ({ children }) => {
 
     //RENDER DE NUESTRO CARTPROVIDER
     return (
-        <CartContext.Provider value={{ items, agregarAlCarrito }}>
+        <CartContext.Provider value={{ itemsCarrito, agregarAlCarrito, borrarDelCarrito, limpiarCarrito }}>
             {children}
         </CartContext.Provider>
     )

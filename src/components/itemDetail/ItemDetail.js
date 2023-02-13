@@ -14,6 +14,7 @@ import {useCartContext} from "../../context/CartContex.js";
 
 const ItemDetail = (props) => {
     
+    //ESTADO DE COUNT
     const [cantidadDeProductos, setCantidadDeProductos] = useState(0);
     
     const { id, nombre, desc, precio, stock, img } = props.data
@@ -35,6 +36,7 @@ const ItemDetail = (props) => {
                 precio: precio,
                 count: cantidadDeProductos
             }
+            //FN DE CONTEX
             agregarAlCarrito(producto)
         }
     }
@@ -51,7 +53,7 @@ const ItemDetail = (props) => {
                     <Card.Text> $ {precio} </Card.Text>
 
                     <ItemCount stock={stock} guardarCantidad={funcionDeHijoDeGuardarCantidad}/>
-                    <button onClick={onAdd}> onAdd </button>
+                    <button onClick={onAdd}> Agregar a carrito </button>
                 </Card.Body>
             </Card>
         </section>

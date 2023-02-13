@@ -28,12 +28,12 @@ const disOne = () =>{
 }
 
 //FUNCION AGREAR A CARRITO
-const oneAdd = () =>{
+/* const oneAdd = () =>{
     if(count!==0){
         setCount(0)
         console.log(count);
     }
-}
+} */
 
 
     return (
@@ -44,7 +44,6 @@ const oneAdd = () =>{
             <button onClick={disOne}>-</button>
             </div>
             <div className='agregar'>
-            <button onClick={oneAdd}>Agregar a carrito</button>
             </div>
         </section> 
     )
