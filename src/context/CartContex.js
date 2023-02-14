@@ -40,6 +40,7 @@ const CartProvider = ({ children }) => {
     }
 
     const limpiarCarrito = () => {
+
         setItemsCarrito([])
     }
     
@@ -53,7 +54,7 @@ const CartProvider = ({ children }) => {
 
     //RENDER DE NUESTRO CARTPROVIDER
     return (
-        <CartContext.Provider value={{ itemsCarrito, agregarAlCarrito, borrarDelCarrito, limpiarCarrito }}>
+        <CartContext.Provider value={{ itemsCarrito, agregarAlCarrito, borrarDelCarrito, limpiarCarrito}}>
             {children}
         </CartContext.Provider>
     )
