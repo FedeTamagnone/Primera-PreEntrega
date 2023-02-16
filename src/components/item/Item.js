@@ -17,7 +17,6 @@ const {nombre,desc,precio,img,id} = props.data
 
     return ( 
         <section>
-            <p>Este es cada item</p>
             <Card className="tarjeta">
                 <div className="divImagen">
                 <Card.Img className ="imagen"  src= {img} />      

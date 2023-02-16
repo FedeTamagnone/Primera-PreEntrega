@@ -4,6 +4,8 @@
 import { useEffect , useState} from "react";
 import { Link, useParams } from "react-router-dom";
 import ItemDetail from "../itemDetail/ItemDetail.js"
+import {doc, getDocs} from "firebase/firestore"
+import { db } from "../../services/firebase.js";
 //ESTILOS
 /* ---------------------------- ctrl + shift + L ---------------------------- */
 import "./ItemDetailContainer.css";

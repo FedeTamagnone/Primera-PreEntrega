@@ -4,8 +4,8 @@
         "tipo": "shampoo",
         "marca": "argan",
         "desc": "Limpia el cabello de una manera suave, dejándolo con brillo, sedosad y luminosidad ",
-        "precio": "1200",
-        "stock": "10",
+        "precio": 1200,
+        "stock": 10,
         "img": "../data/multimedia/img1.jpg"
     },
     {
@@ -14,8 +14,8 @@
         "tipo": "crema",
         "marca": "argan",
         "desc": "Moldea el cabello de una manera suave, dándole brillo gracias a sus ingredientes nutritivos.",
-        "precio": "1000",
-        "stock": "3",
+        "precio": 1000,
+        "stock": 3,
         "img": "../data/multimedia/img2.jpg"
     },
     {
@@ -45,7 +45,7 @@
         "marca": "bekim",
         "desc": "Limpia el cabello de una manera suave, dejándolo con brillo, sedosidad y luminosidad ",
         "precio": 1500,
-        "stock": "5",
+        "stock": 5,
         "img": "../data/multimedia/img5.jpg"
     },
     {
@@ -55,7 +55,7 @@
         "marca": "argan",
         "desc": "Limpia el cabello de una manera suave, dejándolo con brillo, sedosidad y luminosidad ",
         "precio": 3000,
-        "stock": "6",
+        "stock": 6,
         "img": "../data/multimedia/img6.png"
     }
 ]

@@ -3,6 +3,8 @@
 //MODULOS
 import { useState, useEffect } from "react";
 import {useParams} from 'react-router-dom'
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../services/firebase";
 //ESTILOS
 import "./ItemListContainer.css";
 //COMPONENTES
@@ -10,12 +12,35 @@ import "./ItemListContainer.css";
 import ItemList from "../itemList/ItemList.js";
 /* --------------------------------- LÓGICA --------------------------------- */
 //PUEDO USAR ARROW FUNCTION
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
     const {tipo}= useParams()
-    useEffect(()=>{
-        fetch("../data/listaProductos.json")
+    useEffect(() => {
+        const getData = async () => {
+            const queryRef = tipo
+            ? query(
+                collection(db, "listaDeProducto"),
+                //"CATEGORIA DE FIRESTORE"
+                where("categoria", "==", tipo)
+                )
+                : collection(db, "listaProductos");
+
+            // hacer la consulta
+            const response = await getDocs(queryRef);
+            const docsInfo = response.docs.map((doc) => {
+                const newDoc = {
+                    id: doc.id,
+                    ...doc.data(),
+                };
+                return newDoc;
+            });
+            setProductos(docsInfo);
+        };
+        getData();
+    }, [tipo]);
+
+/*         fetch("../data/listaProductos.json")
             .then(res => res.json())
             .then(json => {
                 if(tipo){
@@ -23,12 +48,12 @@ const ItemListContainer = (props) => {
                 }else{
                     setProductos(json)
                 }
-            });
-    }, [tipo])
+            });     
+        }, [tipo]*/
+
 
     return (
             <div className="contenedorTarjetas">
-                <p> Componente contenedor ItemListContainer {props.greeting} - Contiene ItemList</p>
                 <ItemList productos={productos}/>
             </div>
     )

@@ -31,16 +31,23 @@ const CartProvider = ({ children }) => {
             listaActual.push(data)
             setItemsCarrito(listaActual)
             console.log(itemsCarrito);
+            alert("Producto agregado")
+            
         }
-    }
+    } 
+
+
 
 
     const borrarDelCarrito = (id) => {
-        setItemsCarrito(itemsCarrito.filter(e => e.id !== id))
-    }
+        const nuevo = [...itemsCarrito]
+        const filtrado = nuevo.filter(e => e.id !== id)
+        setItemsCarrito(filtrado)
+    }  
+
+
 
     const limpiarCarrito = () => {
-
         setItemsCarrito([])
     }
     

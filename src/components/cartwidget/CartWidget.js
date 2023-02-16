@@ -1,8 +1,8 @@
 /* ------------------------------- IMPORTACIONES ---------------------------- */
 
 //MODULOS
-import { useContext } from "react";
-import { useState, useEffect} from "react";
+import { useContext, useEffect } from "react";
+import { useState } from "react";
 //ESTILOS
 import "./CartWidget.css";
 //COMPONENTES
@@ -15,13 +15,13 @@ const CartWidget = () => {
     const [cantidadDeProductos, setCantidadDeProductos] = useState(0);
 
     useEffect(()=>{
-        setCantidadDeProductos(itemsCarrito.length)
-        }, [itemsCarrito]) 
+        setCantidadDeProductos(itemsCarrito.reduce((acc,item)=>acc += item.count,0));
+        },[itemsCarrito])
 
     return ( 
         <div className="contenedorCarrito">
             <img alt="carrito" src={Carrito}></img>
-            <p> {cantidadDeProductos}</p>
+            <p> {cantidadDeProductos} </p>
         </div>
             
     )

@@ -27,7 +27,6 @@ const ItemDetail = (props) => {
         setCantidadDeProductos(cantidadX)
     }
 
-
     const onAdd = () => {
         if (cantidadDeProductos !== 0) {
             const producto = {
@@ -39,9 +38,10 @@ const ItemDetail = (props) => {
             //FN DE CONTEX
             agregarAlCarrito(producto)
         }
-    }
+    } 
 
 
+    
 
     return (
         <section className="contenedorTarjetaDetail">
