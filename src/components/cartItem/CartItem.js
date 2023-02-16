@@ -9,13 +9,13 @@ import "./CartItem.css";
 //COMPONENTES
 /* --------------------------------- LÓGICA --------------------------------- */
 
-const CartItem = ({item,count,precio}) => {
+const CartItem = ({id,item,count,precio}) => {
     const {borrarDelCarrito} = useContext(CartContext)
     const compra = precio * count; 
     return ( 
         <div> 
             {item} Cantidad: {count} - ${compra} 
-            <button onClick={()=>borrarDelCarrito(item)}> ELIMINAR PRODUCTO </button>
+            <button onClick={()=>borrarDelCarrito(id)}> ELIMINAR PRODUCTO </button>
         </div>
     )
 }

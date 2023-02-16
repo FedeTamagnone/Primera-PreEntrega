@@ -11,13 +11,9 @@ import {CartContext} from "../../context/CartContex.js";
 /* --------------------------------- LÓGICA --------------------------------- */
 //PUEDO USAR ARROW FUNCTION
 const CartWidget = () => {
-    const {itemsCarrito} = useContext(CartContext);
-    const [cantidadDeProductos, setCantidadDeProductos] = useState(0);
-
-    useEffect(()=>{
-        setCantidadDeProductos(itemsCarrito.reduce((acc,item)=>acc += item.count,0));
-        },[itemsCarrito])
-
+    const {totalCarrito} = useContext(CartContext);
+    const cantidadDeProductos = totalCarrito()
+    console.log(cantidadDeProductos);
     return ( 
         <div className="contenedorCarrito">
             <img alt="carrito" src={Carrito}></img>

@@ -22,7 +22,6 @@ const CartProvider = ({ children }) => {
     //ESTE ES EL ESTADO DE CARTPROVIDER
     const [itemsCarrito, setItemsCarrito] = useState([])
 
-    
     const agregarAlCarrito = (data) => {
         if(validarProductoExistente(data.id)) {
         alert("El producto ya esta en el carrito")
@@ -30,22 +29,16 @@ const CartProvider = ({ children }) => {
             const listaActual = itemsCarrito
             listaActual.push(data)
             setItemsCarrito(listaActual)
-            console.log(itemsCarrito);
             alert("Producto agregado")
             
         }
     } 
-
-
-
 
     const borrarDelCarrito = (id) => {
         const nuevo = [...itemsCarrito]
         const filtrado = nuevo.filter(e => e.id !== id)
         setItemsCarrito(filtrado)
     }  
-
-
 
     const limpiarCarrito = () => {
         setItemsCarrito([])
@@ -59,9 +52,14 @@ const CartProvider = ({ children }) => {
         }
     }
 
+    const totalCarrito = ()=>{
+        const totalCarrito = itemsCarrito.reduce((acc,item)=>acc + item.count,0);
+        return totalCarrito;
+    }
+
     //RENDER DE NUESTRO CARTPROVIDER
     return (
-        <CartContext.Provider value={{ itemsCarrito, agregarAlCarrito, borrarDelCarrito, limpiarCarrito}}>
+        <CartContext.Provider value={{ itemsCarrito, agregarAlCarrito, borrarDelCarrito, limpiarCarrito,totalCarrito}}>
             {children}
         </CartContext.Provider>
     )

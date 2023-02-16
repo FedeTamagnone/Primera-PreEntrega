@@ -29,7 +29,7 @@ const Cart = () => {
             ) : (
                 <>
                     {itemsCarrito.map((e) => (
-                    <CartItem key={e.id} item={e.nombre} count={e.count} precio={e.precio} />
+                    <CartItem key={e.id} id={e.id} item={e.nombre} count={e.count} precio={e.precio} />
                     ))}
                     <button onClick={() => limpiarCarrito()}> VACIAR CARRITO </button>
                     <p> <strong> El total de su compra es : ${total} </strong> </p>

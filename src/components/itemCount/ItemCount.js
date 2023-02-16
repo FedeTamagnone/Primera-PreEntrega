@@ -27,15 +27,6 @@ const disOne = () =>{
     props.guardarCantidad(count)
 }
 
-//FUNCION AGREAR A CARRITO
-/* const oneAdd = () =>{
-    if(count!==0){
-        setCount(0)
-        console.log(count);
-    }
-} */
-
-
     return (
         <section className='contenedorContador'>
             <div className='contador'>
