@@ -38,8 +38,8 @@ root.render(
                 <NavBar />
                 <Routes>
                     <Route exact path="/" element={<Home />} />
-                    <Route exact path="/productos" element={<ItemListContainer greeting="Estamos en el directorio" />} />
-                    <Route exact path="/productos/:tipo" element={<ItemListContainer greeting="Estamos en el directorio" />} />
+                    <Route exact path="/productos" element={<ItemListContainer/>} />
+                    <Route exact path="/productos/:tipo" element={<ItemListContainer/>} />
                     <Route exact path="/producto/:productoId" element={<ItemDetailContainer />} />
                     <Route exact path="/informacion" element={<Info />} />
                     <Route exact path="/nosotros" element={<AboutUs />} />

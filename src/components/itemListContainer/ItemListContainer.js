@@ -20,7 +20,7 @@ const ItemListContainer = () => {
         const getData = async () => {
             const queryRef = tipo
             ? query(
-                collection(db, "listaDeProducto"),
+                collection(db, "listaProductos"),
                 //"CATEGORIA DE FIRESTORE"
                 where("categoria", "==", tipo)
                 )
@@ -54,6 +54,7 @@ const ItemListContainer = () => {
 
     return (
             <div className="contenedorTarjetas">
+                <p> </p>
                 <ItemList productos={productos}/>
             </div>
     )
