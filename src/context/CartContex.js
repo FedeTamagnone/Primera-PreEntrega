@@ -56,10 +56,15 @@ const CartProvider = ({ children }) => {
         const totalCarrito = itemsCarrito.reduce((acc,item)=>acc + item.count,0);
         return totalCarrito;
     }
+    const obtenerTotal = () => {
+        let total = 0
+        itemsCarrito.forEach((e) => total += (e.count * e.precio))
+        return total        
+    };
 
     //RENDER DE NUESTRO CARTPROVIDER
     return (
-        <CartContext.Provider value={{ itemsCarrito, agregarAlCarrito, borrarDelCarrito, limpiarCarrito,totalCarrito}}>
+        <CartContext.Provider value={{ itemsCarrito, agregarAlCarrito, borrarDelCarrito, limpiarCarrito,totalCarrito,obtenerTotal}}>
             {children}
         </CartContext.Provider>
     )

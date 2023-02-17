@@ -22,7 +22,8 @@ import NavBar from './components/navbar/NavBar.js';
 import Home from './components/home/Home.js';
 import AboutUs from './components/aboutUs/AboutUs.js';
 import Info from './components/info/Info.js';
-import Cart  from './components/cart/Cart';
+import Cart  from './components/cart/Cart.js';
+import Formulario from './components/formulario/Formulario.js';
 
 // WEBVITALS
 import reportWebVitals from './reportWebVitals';
@@ -44,6 +45,7 @@ root.render(
                     <Route exact path="/informacion" element={<Info />} />
                     <Route exact path="/nosotros" element={<AboutUs />} />
                     <Route exact path="/carrito" element={<Cart/>} />
+                    <Route exact path="/carrito/formulario" element={<Formulario/>} />
                 </Routes>
                 <Footer />
             </BrowserRouter>

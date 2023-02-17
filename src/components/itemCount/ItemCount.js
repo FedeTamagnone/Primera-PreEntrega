@@ -8,8 +8,6 @@ import "./ItemCount.css";
 /* --------------------------------- LÓGICA --------------------------------- */
 
 const ItemCount = (props) => {
-//PROPS.STOCK = "10"
-
 //AGREGAR UN MANEJO DE ESTADO (useState)
 const [count, setCount]= useState(0);
 
@@ -18,13 +16,11 @@ const [count, setCount]= useState(0);
 const addOne = () =>{
     if(count < props.stock)
     setCount(count + 1);
-    props.guardarCantidad(count)
 }
 
 const disOne = () =>{
     if(count > 0)
     setCount(count - 1);
-    props.guardarCantidad(count)
 }
 
     return (
@@ -34,8 +30,7 @@ const disOne = () =>{
             <p> {count} </p>
             <button onClick={disOne}>-</button>
             </div>
-            <div className='agregar'>
-            </div>
+            <button className='agregar'onClick={() => props.onAdd(count)}> Agregar a carrito </button>
         </section> 
     )
 }

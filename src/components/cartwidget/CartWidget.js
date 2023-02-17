@@ -12,12 +12,10 @@ import {CartContext} from "../../context/CartContex.js";
 //PUEDO USAR ARROW FUNCTION
 const CartWidget = () => {
     const {totalCarrito} = useContext(CartContext);
-    const cantidadDeProductos = totalCarrito()
-    console.log(cantidadDeProductos);
     return ( 
         <div className="contenedorCarrito">
             <img alt="carrito" src={Carrito}></img>
-            <p> {cantidadDeProductos} </p>
+            <p> {totalCarrito()} </p>
         </div>
             
     )

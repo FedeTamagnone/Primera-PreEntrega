@@ -8,26 +8,18 @@ import Card from 'react-bootstrap/Card';
 /* ---------------------------- ctrl + shift + L ---------------------------- */
 import "./ItemDetail.css";
 //COMPONENTES
-import { useState} from "react";
-import {useCartContext} from "../../context/CartContex.js";
+import { useContext } from 'react'
+import {CartContext} from "../../context/CartContex.js";
 /* --------------------------------- LÓGICA --------------------------------- */
 
 const ItemDetail = (props) => {
     
     //ESTADO DE COUNT
-    const [cantidadDeProductos, setCantidadDeProductos] = useState(0);
-    
+
     const { id, nombre, desc, precio, stock, img } = props.data
-    
-    //Hijo ejecuta fn y modifica al padre. No puede pasarle parametros para modificar hijo a padre
+    const {agregarAlCarrito} = useContext(CartContext)
 
-    const {agregarAlCarrito} = useCartContext()
-
-    const funcionDeHijoDeGuardarCantidad = (cantidadX) =>{
-        setCantidadDeProductos(cantidadX)
-    }
-
-    const onAdd = () => {
+    const onAdd = (cantidadDeProductos) => {
         if (cantidadDeProductos !== 0) {
             const producto = {
                 id: id,
@@ -39,10 +31,6 @@ const ItemDetail = (props) => {
             agregarAlCarrito(producto)
         }
     } 
-
-
-    
-
     return (
         <section className="contenedorTarjetaDetail">
             <Card className="tarjeta-Detail">
@@ -51,9 +39,7 @@ const ItemDetail = (props) => {
                     <Card.Title> {nombre} </Card.Title>
                     <Card.Text> {desc} </Card.Text>
                     <Card.Text> $ {precio} </Card.Text>
-
-                    <ItemCount stock={stock} guardarCantidad={funcionDeHijoDeGuardarCantidad}/>
-                    <button onClick={onAdd}> Agregar a carrito </button>
+                    <ItemCount stock={stock} onAdd={onAdd}/>
                 </Card.Body>
             </Card>
         </section>

@@ -54,7 +54,6 @@ const ItemListContainer = () => {
 
     return (
             <div className="contenedorTarjetas">
-                <p> </p>
                 <ItemList productos={productos}/>
             </div>
     )

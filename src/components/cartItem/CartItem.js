@@ -13,7 +13,7 @@ const CartItem = ({id,item,count,precio}) => {
     const {borrarDelCarrito} = useContext(CartContext)
     const compra = precio * count; 
     return ( 
-        <div> 
+        <div className='tarjetaCarrito'> 
             {item} Cantidad: {count} - ${compra} 
             <button onClick={()=>borrarDelCarrito(id)}> ELIMINAR PRODUCTO </button>
         </div>
